@@ -4,6 +4,7 @@ import {Layer} from 'ol/layer';
 import {Source} from 'ol/source';
 import LayerRenderer from 'ol/renderer/Layer';
 import {TileSourceEvent} from 'ol/source/Tile';
+import {ProjectionLike} from 'ol/proj';
 
 import {default as RLayer, RLayerProps} from './RLayer';
 
@@ -11,6 +12,8 @@ import {default as RLayer, RLayerProps} from './RLayer';
  * @propsfor RLayerRaster
  */
 export interface RLayerRasterProps extends RLayerProps {
+    /** The layer will be reprojected if its projection is different than the map */
+    projection?: ProjectionLike;
     /** Triggered when all currently visible tiles have finished loading */
     onTileLoadEnd?: (this: RLayerRaster<RLayerRasterProps>, e: TileSourceEvent) => void;
     /** Called when a tile starts loading */

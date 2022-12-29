@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Support additional `<RMap>` properties, including disabling of the rotation
 -   Fix [#109], interactions do not support JSX styles
 -   Add event callbacks to `RDraw` and `RModify`
+-   Remove `projection` from the base `RLayerProps` and move it to `RLayerRaster` because vector layers do not have a projection
 
 ### [1.4.7] 2022-12-23
 
